@@ -8,7 +8,7 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int flagHeight, int jumpHeight) {
-
+/*
      int storereturn=0;
         Random random=new Random();
         int sum=0;
@@ -26,7 +26,7 @@ public class Jumper {
 
 return counter;
 
-
+*/
 /*
         Integer storeTempValue = 1;
         for (int i = 1; i <= flagHeight; i++) {
@@ -54,6 +54,8 @@ return counter;
             }
         }*/
               //return counter;
+        return -1;
+
         }
 
 
