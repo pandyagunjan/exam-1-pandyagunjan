@@ -40,10 +40,10 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        if(pet.name==this.ownerName)
-        return true;
-        else
-            return false;
+       if(pet.getOwner().ownerName==list[0].getName())
+       return true;
+                       else
+       return false;
     }
 
     /**
@@ -78,14 +78,16 @@ public class PetOwner {
      * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
      */
     public Float getAveragePetAge() {
-        return null;
+          int check=list.length;
+            return Float.valueOf((list[0].getAge()+ list[1].getAge())/2);
+
     }
 
     /**
      * @return the number of Pet objects stored in this class
      */
     public Integer getNumberOfPets() {
-        return null;
+        return list.length;
     }
 
     /**
