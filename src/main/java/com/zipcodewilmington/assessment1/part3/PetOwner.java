@@ -1,26 +1,37 @@
 package com.zipcodewilmington.assessment1.part3;
 
+import java.util.ArrayList;
+
 /**
  * Created by leon on 2/16/18.
  */
 public class PetOwner {
+
+    private volatile ArrayList<Pet> list = new ArrayList<>();
+
+
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
+        name="";
+
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        list.add(pet);
+
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
+        list.remove(pet);
 
     }
 

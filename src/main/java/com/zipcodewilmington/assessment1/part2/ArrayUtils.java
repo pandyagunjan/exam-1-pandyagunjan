@@ -105,7 +105,7 @@ public class ArrayUtils {
         }
 
 
-        Integer max = tracker.get(0);
+        Integer max = tracker.get(1);
         for (int i = 1; i < tracker.size(); i++) {
             if (tracker.get(i) < max && tracker.get(i)!=0)
                 max = tracker.get(i);
@@ -128,7 +128,7 @@ public class ArrayUtils {
             storeAltered[i]=(Integer)objectArray[i];
         }
         int j=0;
-        for (int i = objectArray.length+1; i < storeAltered.length; i++) {
+        for (int i = objectArray.length; i < storeAltered.length; i++) {
              storeAltered[i]=(Integer)objectArrayToAdd[j];
              j++;
         }
