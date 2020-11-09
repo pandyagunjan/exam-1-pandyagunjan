@@ -51,7 +51,21 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+   String[] spaceString=sentence.split(" ");
+        char[] storeCharArray = spaceString[0].toCharArray();
+        StringBuilder storeReverse= new StringBuilder();
+
+        for (int i = storeCharArray.length - 1; i >= 0; i--)
+            storeReverse.append(storeCharArray[i]);
+        String str=storeReverse.toString();
+        StringBuilder strResult = new StringBuilder();
+        String upString = str.toUpperCase();
+        strResult.append(upString.charAt(0));
+        strResult.append(str.substring(1));
+
+      return strResult.toString();
+
+
     }
 
 
@@ -62,7 +76,15 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+
+        char[] storeCharArray = str.toCharArray();
+        StringBuilder storeRemove= new StringBuilder();
+
+        for (int i = 0; i <=storeCharArray.length - 1; i++)
+            if(i!=index)
+                storeRemove.append(storeCharArray[i]);
+
+        return storeRemove.toString();
     }
 
 }
