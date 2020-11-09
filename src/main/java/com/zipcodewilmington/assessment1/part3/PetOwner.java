@@ -7,23 +7,23 @@ import java.util.ArrayList;
  */
 public class PetOwner {
 
-    private volatile ArrayList<Pet> list = new ArrayList<>();
-
+    private Pet[] list;
+    private String ownerName;
 
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
-        name="";
-
+        this.ownerName=name;
+        list=pets;
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
-        list.add(pet);
+
 
     }
 
@@ -31,7 +31,7 @@ public class PetOwner {
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-        list.remove(pet);
+
 
     }
 
@@ -40,14 +40,23 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+        if(pet.name==this.ownerName)
+        return true;
+        else
+            return false;
     }
 
     /**
      * @return the age of the Pet object whose age field is the lowest amongst all Pets in this class
      */
     public Integer getYoungetPetAge() {
-        return null;
+
+       // for (int i = 0; i <= list.length ; i++) {
+            if(list[0].getAge()> list[1].getAge())
+                return list[1].getAge();
+             else
+                 return list[0].getAge();
+
     }
 
 
@@ -57,7 +66,11 @@ public class PetOwner {
      * @return the age of the Pet object whose age field is the highest amongst all Pets in this class
      */
     public Integer getOldestPetAge() {
-        return null;
+        if(list[0].getAge()< list[1].getAge())
+            return list[1].getAge();
+        else
+            return list[0].getAge();
+
     }
 
 
@@ -79,13 +92,13 @@ public class PetOwner {
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+        return this.ownerName;
     }
 
     /**
      * @return array representation of animals owned by this PetOwner
      */
     public Pet[] getPets() {
-        return null;
+        return list;
     }
 }

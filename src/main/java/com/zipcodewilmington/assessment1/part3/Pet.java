@@ -52,11 +52,20 @@ public abstract class Pet implements Animal {
         return name;
     }
 
+    public void setName()
+    {
+        this.name=name;
+    }
+
     /**
      * @return age of this pet
      */
     public Integer getAge() {
         return age;
+    }
+    public void setAge()
+    {
+        this.age=age;
     }
 
     /**
