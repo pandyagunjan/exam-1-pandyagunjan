@@ -30,6 +30,7 @@ public class ArrayUtils {
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
+
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
         int arrayLength= objectArray.length;
         Integer[] storeAltered= new Integer[arrayLength-1];
@@ -49,8 +50,7 @@ public class ArrayUtils {
         }
         return output;
 
-     }
-
+    }
     /**
      * @param objectArray an array of any type of Object
      * @return the most frequently occurring object in the array

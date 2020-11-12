@@ -9,16 +9,20 @@ public class Jumper {
      */
     public int jumps(int flagHeight, int jumpHeight) {
 
+
+       //  int quo= flagHeight/jumpHeight;
+        int remainder = (flagHeight%jumpHeight) + flagHeight/jumpHeight;
+
+    /*    int counter=1;
+
      int storereturn=0;
         Random random=new Random();
         int sum=0;
-        int counter=1;
    if(flagHeight <jumpHeight)
        counter=flagHeight;
    else
    if(jumpHeight==1)
        counter=flagHeight;
-
 
     /*    while(flagHeight!=jumpHeight && sum!=flagHeight)
         {
@@ -27,7 +31,7 @@ public class Jumper {
                 counter++;
         }*/
 
-return counter;
+//return counter; */
 
 
 /*
@@ -58,7 +62,7 @@ return counter;
         }*/
               //return counter;
         //return -1;
-
+ return remainder;
         }
 
 
