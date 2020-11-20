@@ -5,6 +5,31 @@ import java.util.Arrays;
 public class Palindrome {
 
     public Integer countPalindromes(String input){
+
+
+            int counter = input.length();
+            int badSignCounter = 0;
+            for (int i=0; i<(input.length()/2-1); i++) {
+                if (input.charAt(i) != (input.charAt(input.length() - i - 1))) {
+                    badSignCounter += 1;
+                }
+                if (badSignCounter == 0){
+                    counter += 1;
+                }
+            }
+            for (int i=0; i<(input.length()-1); i++){
+                if (input.charAt(i) == input.charAt(i+1)){
+                    counter += 1;
+                }
+            }
+            for (int i=0; i<(input.length()-2); i++) {
+                if (input.charAt(i) == input.charAt(i + 2)) {
+                    counter += 1;
+                }
+            }
+            return counter;
+        }
+    }
 /*
          int i=0;
          int j=input.length()-1;
@@ -32,28 +57,28 @@ public class Palindrome {
 return counter;
     }
 */
-        char[] array = input.toCharArray();
-
-        StringBuilder storeString= new StringBuilder();
-
-            int j = array.length-1;;
-           for (int i = 0; i < array.length;)
-            {
-                if(array[i] == (array[j]) && i!=j)
-                {
-                    storeString.append(array[i]);
-                    storeString.append(array[j]);
-                    i++;
-                    j--;
-
-                }
-                else {
-                    storeString.append(array[i]);
-                    i++;
-                    j--;
-                }
-
-        }
-return storeString.length();
-    }
-}
+//        char[] array = input.toCharArray();
+//
+//        StringBuilder storeString= new StringBuilder();
+//
+//            int j = array.length-1;;
+//           for (int i = 0; i < array.length;)
+//            {
+//                if(array[i] == (array[j]) && i!=j)
+//                {
+//                    storeString.append(array[i]);
+//                    storeString.append(array[j]);
+//                    i++;
+//                    j--;
+//
+//                }
+//                else {
+//                    storeString.append(array[i]);
+//                    i++;
+//                    j--;
+//                }
+//
+//        }
+//return storeString.length();
+//    }
+//}
